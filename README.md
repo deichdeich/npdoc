@@ -2,6 +2,8 @@
 
 I do a lot of work entirely in an IPython notebook and it can be annoying to switch back and forth from a browser to the command line to look up function usage.  I therefore wrote this little utility.  Given a numpy function name, it will look up the function's source on GitHub, and parse the usage comment at the top of the function.
 
+This code requires the BeautifulSoup 4 library, which is readily pip'd.
+
 Here's an example:
 
 ```
