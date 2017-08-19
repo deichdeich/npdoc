@@ -10,7 +10,7 @@ Usage:
 
 >> npd('linalg.tensorinv')
 
->>> Compute the 'inverse' of an N-dimensional array.
+>> Compute the 'inverse' of an N-dimensional array.
 
     The result is an inverse for `a` relative to the tensordot operation
     ``tensordot(a, b, ind)``, i. e., up to floating-point accuracy,
