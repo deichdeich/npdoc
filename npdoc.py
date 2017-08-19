@@ -2,7 +2,7 @@
 Author: Alex Deich
 Date: August, 2017
 
-Utility to read NumPy documentation in an IPython notebook.
+Utility to read NumPy documentation on the command line.
 
 Usage:
 
