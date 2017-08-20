@@ -97,7 +97,7 @@ def npd(func, nl = None, browser = None):
             raw_url = source_url.replace('blob', 'raw')  
             raw = urllib2.urlopen(raw_url).read()
             
-            func_def = 'def {}'.format(fun)
+            func_def = '{}('.format(fun)
             function = 0
             quotes = 0
             printables = []
@@ -108,7 +108,8 @@ def npd(func, nl = None, browser = None):
                     quotes += 1
                 if function == 1 and quotes < 2 and func_def not in i and '\"\"\"' not in i:
                     printables.append(i)
-            
+
+    
             print_range = nl
             
             if print_range < 0:
