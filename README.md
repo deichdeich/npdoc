@@ -48,4 +48,4 @@ And a negative argument gives the last N lines:
    h = plt.contourf(x,y,z)
 ```
 
-Note:  in the case of the base NumPy functions, like ```np.array```, the source is more difficult to get to and to parse (those functions are written in C, too), so in that case, ```npd()``` will just open a browser with the formatted webpage.
+Note:  in the case of the base NumPy functions, like ```np.array```, the source is more difficult to get to and to parse (those functions are written in C, too), so in that case, ```npd()``` will just open a browser with the formatted webpage.  If you just want to go straight to the formatted webpage anyway, just do ```npd('meshgrid', browser = True)```.
