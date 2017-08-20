@@ -11,14 +11,14 @@ Here's an example:
 
 >> npd('meshgrid')
 
->>  Return coordinate matrices from coordinate vectors.
+>> Return coordinate matrices from coordinate vectors.
 
-    Make N-D coordinate arrays for vectorized evaluations of
-    N-D scalar/vector fields over N-D grids, given
-    one-dimensional coordinate arrays x1, x2,..., xn.
+   Make N-D coordinate arrays for vectorized evaluations of
+   N-D scalar/vector fields over N-D grids, given
+   one-dimensional coordinate arrays x1, x2,..., xn.
 
-    .. versionchanged:: 1.9
-       1-D and 0-D cases are allowed.
+   .. versionchanged:: 1.9
+      1-D and 0-D cases are allowed.
 
 ...
 ```
