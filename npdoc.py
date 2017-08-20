@@ -2,7 +2,7 @@
 Author: Alex Deich
 Date: August, 2017
 
-Utility to read NumPy documentation on the command line.
+Utility to read NumPy documentation in an IPython notebook.
 
 Usage:
 
@@ -11,7 +11,6 @@ Usage:
 >> npd('linalg.tensorinv')
 
 >> Compute the 'inverse' of an N-dimensional array.
-<<<<<<< HEAD
 
    The result is an inverse for `a` relative to the tensordot operation
    ``tensordot(a, b, ind)``, i. e., up to floating-point accuracy,
@@ -25,8 +24,6 @@ or the last x lines (if x is < 0).  Behold:
 >> npd('linalg.tensorinv', nl = 4)
 
 >> Compute the 'inverse' of an N-dimensional array.
-=======
->>>>>>> 076f4f06ec64074a3a98c265e34723bf64e35048
 
     The result is an inverse for `a` relative to the tensordot operation
     ``tensordot(a, b, ind)``, i. e., up to floating-point accuracy,
