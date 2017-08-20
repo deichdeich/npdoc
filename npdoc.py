@@ -115,7 +115,7 @@ def npd(func, nl = None, browser = None):
                 printables = printables[print_range:]
             elif print_range >= 0:
                 printables = printables[:print_range]
-            elif print_range == None:
+            else:
                 printables = printables
             
             print('\n'.join(printables))
