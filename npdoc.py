@@ -120,4 +120,3 @@ def npd(func, nl = None, browser = None):
             
             print('\n'.join(printables))
             
-            
