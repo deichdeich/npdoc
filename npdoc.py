@@ -10,12 +10,31 @@ Usage:
 
 >> npd('linalg.tensorinv')
 
->>> Compute the 'inverse' of an N-dimensional array.
+>> Compute the 'inverse' of an N-dimensional array.
+
+   The result is an inverse for `a` relative to the tensordot operation
+   ``tensordot(a, b, ind)``, i. e., up to floating-point accuracy,
+   ``tensordot(tensorinv(a), a, ind)`` is the "identity" tensor for the
+   tensordot operation...
+    
+
+You can also add the nl parameter to print the first x lines (if x > 0)
+or the last x lines (if x is < 0).  Behold:
+
+>> npd('linalg.tensorinv', nl = 4)
+
+>> Compute the 'inverse' of an N-dimensional array.
 
     The result is an inverse for `a` relative to the tensordot operation
     ``tensordot(a, b, ind)``, i. e., up to floating-point accuracy,
-    ``tensordot(tensorinv(a), a, ind)`` is the "identity" tensor for the
-    tensordot operation...
+
+OR
+
+>> npd('linalg.tensorinv', nl = -4)
+
+>> b = np.random.randn(24)
+   np.allclose(np.tensordot(ainv, b, 1), np.linalg.tensorsolve(a, b))
+   True
 """
 
 import webbrowser
@@ -40,7 +59,7 @@ def linebyline(string):
 def npbr(func):
     webbrowser.open_new_tab('https://docs.scipy.org/doc/numpy/reference/generated/numpy.{}.html'.format(func))    
 
-def npd(func, browser = None):
+def npd(func, nl = None, browser = None):
 
     if '.' in func:
         lib, fun = func.split('.')
@@ -81,11 +100,24 @@ def npd(func, browser = None):
             func_def = 'def {}'.format(fun)
             function = 0
             quotes = 0
+            printables = []
             for i in linebyline(raw):
                 if func_def in i:
                     function = 1
                 if '\"\"\"' in i and function == 1:
                     quotes += 1
                 if function == 1 and quotes < 2 and func_def not in i and '\"\"\"' not in i:
-                    print(i)
-    
+                    printables.append(i)
+            
+            print_range = nl
+            
+            if print_range < 0:
+                printables = printables[print_range:]
+            elif print_range >= 0:
+                printables = printables[:print_range]
+            elif print_range == None:
+                printables = printables
+            
+            print('\n'.join(printables))
+            
+            
