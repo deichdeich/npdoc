@@ -66,7 +66,7 @@ def npd(func, nl = None, browser = None):
     else:
         fun = func
         
-    if browser == True:
+    if browser == 'br':
         npbr(func)
         
     else:
