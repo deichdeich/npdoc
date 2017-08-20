@@ -30,17 +30,17 @@ You can also specify to only see the first or last lines with the ```nl``` argum
 
 >> npd('meshgrid', nl = 4)
 
->>  Return coordinate matrices from coordinate vectors.
+>> Return coordinate matrices from coordinate vectors.
 
-    Make N-D coordinate arrays for vectorized evaluations of
-    N-D scalar/vector fields over N-D grids, given
+   Make N-D coordinate arrays for vectorized evaluations of
+   N-D scalar/vector fields over N-D grids, given
 ```
 
 And a negative argument gives the last N lines:
 ```
 >> import npdoc
 
->> npd('meshgrid', nl = 4)
+>> npd('meshgrid', nl = -4)
 
 >> y = np.arange(-5, 5, 0.1)
    xx, yy = np.meshgrid(x, y, sparse=True)
