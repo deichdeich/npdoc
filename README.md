@@ -42,10 +42,10 @@ And a negative argument gives the last N lines:
 
 >> npd('meshgrid', nl = -4)
 
->> y = np.arange(-5, 5, 0.1)
-   xx, yy = np.meshgrid(x, y, sparse=True)
-   z = np.sin(xx**2 + yy**2) / (xx**2 + yy**2)
-   h = plt.contourf(x,y,z)
+>>  >>> y = np.arange(-5, 5, 0.1)
+    >>> xx, yy = np.meshgrid(x, y, sparse=True)
+    >>> z = np.sin(xx**2 + yy**2) / (xx**2 + yy**2)
+    >>> h = plt.contourf(x,y,z)
 ```
 
 Note:  in the case of the base NumPy functions, like ```np.array```, the source is more difficult to get to and to parse (those functions are written in C, too), so in that case, ```npd()``` will just open a browser with the formatted webpage.  If you just want to go straight to the formatted webpage anyway, just do ```npd('meshgrid', browser = True)```.
