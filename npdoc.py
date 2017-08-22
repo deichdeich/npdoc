@@ -106,7 +106,7 @@ def npd(func, nl = None, browser = None):
                     function = 1
                 if '\"\"\"' in i and function == 1:
                     quotes += 1
-                if function == 1 and quotes < 2 and func_def not in i and '\"\"\"' not in i:
+                if function == 1 and quotes < 2 and '\"\"\"' not in i:
                     printables.append(i)
 
     
@@ -120,4 +120,3 @@ def npd(func, nl = None, browser = None):
                 printables = printables
             
             print('\n'.join(printables))
-            
