@@ -72,7 +72,7 @@ def npd(func, nl = None, browser = None):
             # link listed on the documentation page, and the naming conventions
             # for the github isn't as straightforward, so I just open the browser
             # at that point.
-            print('Couldn\'t find an easy source... just gonna open the webpage')
+            print 'Couldn\'t find an easy source... just gonna open the webpage'
             npbr(func)
 
         else:
@@ -105,4 +105,4 @@ def npd(func, nl = None, browser = None):
             else:
                 printables = printables
 
-            print('\n'.join(printables))
+            print '\n'.join(printables)
